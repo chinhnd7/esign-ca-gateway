@@ -17,11 +17,8 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    // Nên bắt cả Exception.class
     @ExceptionHandler(Exception.class)
     public void handleUnwantedException(Exception e, HttpServletResponse response) throws IOException {
-        // Thực tế người ta dùng logger
         logger.error("Exception occurred", e);
         Map<String, Object> errorDetails = new HashMap<>();
         errorDetails.put("message", "Server Error");

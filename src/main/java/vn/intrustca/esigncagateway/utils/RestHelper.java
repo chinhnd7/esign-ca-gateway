@@ -16,6 +16,8 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import vn.intrustca.esigncagateway.payload.RaUserCertificate;
 import vn.intrustca.esigncagateway.payload.exception.AppException;
+import vn.intrustca.esigncagateway.payload.exception.BusinessException;
+import vn.intrustca.esigncagateway.payload.exception.ExceptionCode;
 import vn.intrustca.esigncagateway.payload.exception.ValidationError;
 
 import javax.net.ssl.SSLContext;
@@ -89,7 +91,7 @@ public class RestHelper {
             throw new AppException(e.getRawStatusCode(), e.getMessage());
         }
 
-        throw new AppException(responseEntity.getStatusCodeValue(), ValidationError.NotFound);
+        throw new BusinessException(ExceptionCode.INVALID_CERT);
     }
 
     private HttpEntity createAuthHttpEntity(Object requestObject, String tokenValue, HttpServletRequest httpServletRequest) {

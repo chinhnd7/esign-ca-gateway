@@ -53,14 +53,10 @@ public class GatewayService {
                 response.setUserCertificates(ServiceUtils.adaptRaResponseToNeac(responseCerts));
                 response.setTransactionId(request.getTransactionId());
             }else {
-                throw ServiceExceptionBuilder.newBuilder()
-                        .addError(HttpStatus.UNAUTHORIZED, new ValidationErrorResponse("raAuthentication", ValidationError.raAuthentication))
-                        .build();
+                throw new BusinessException(ExceptionCode.LOGIN_FAIL);
             }
         } catch (Exception e) {
-            throw ServiceExceptionBuilder.newBuilder()
-                    .addError(HttpStatus.NOT_FOUND, new ValidationErrorResponse("certNotFound", ValidationError.NotFound))
-                    .build();
+            throw new BusinessException(ExceptionCode.INVALID_CERT);
         }
         return response;
     }
