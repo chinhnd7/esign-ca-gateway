@@ -1,4 +1,4 @@
-package vn.intrustca.esigncagateway.utils.exception;
+package vn.intrustca.esigncagateway.payload.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -68,10 +68,10 @@ public class ApiExceptionHandler {
         return null;
     }
 
-    @ExceptionHandler(value = {JwtExpiredTokenException.class})
-    protected ErrorResponse handleJwtExpiredTokenException(JwtExpiredTokenException ex) {
-        return new ErrorResponse(HttpStatus.UNAUTHORIZED.value(),
-                ex.getMessage());
-    }
+//    @ExceptionHandler(value = {JwtExpiredTokenException.class})
+//    protected ErrorResponse handleJwtExpiredTokenException(JwtExpiredTokenException ex) {
+//        return new ErrorResponse(HttpStatus.UNAUTHORIZED.value(),
+//                ex.getMessage());
+//    }
 }
 

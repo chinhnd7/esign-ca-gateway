@@ -1,4 +1,4 @@
-package vn.intrustca.esigncagateway.utils.exception;
+package vn.intrustca.esigncagateway.payload.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

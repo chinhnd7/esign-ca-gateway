@@ -2,7 +2,7 @@ package vn.intrustca.esigncagateway.utils;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import vn.intrustca.esigncagateway.utils.exception.ValidationErrorResponse;
+import vn.intrustca.esigncagateway.payload.exception.ValidationErrorResponse;
 
 
 import java.util.List;

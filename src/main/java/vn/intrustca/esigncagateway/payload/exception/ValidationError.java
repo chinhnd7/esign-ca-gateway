@@ -1,4 +1,4 @@
-package vn.intrustca.esigncagateway.utils.exception;
+package vn.intrustca.esigncagateway.payload.exception;
 
 public @interface ValidationError {
     String AssertFalse = "validation.constraints.AssertFalse";

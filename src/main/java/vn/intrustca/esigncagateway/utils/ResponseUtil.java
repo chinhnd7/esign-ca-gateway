@@ -4,9 +4,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
-import vn.intrustca.esigncagateway.utils.exception.KeyValue;
-import vn.intrustca.esigncagateway.utils.exception.ServiceException;
-import vn.intrustca.esigncagateway.utils.exception.ValidationErrorResponse;
+import vn.intrustca.esigncagateway.payload.exception.KeyValue;
+import vn.intrustca.esigncagateway.payload.exception.ServiceException;
+import vn.intrustca.esigncagateway.payload.exception.ValidationErrorResponse;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;

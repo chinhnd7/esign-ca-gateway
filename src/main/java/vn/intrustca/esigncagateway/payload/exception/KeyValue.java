@@ -1,4 +1,4 @@
-package vn.intrustca.esigncagateway.utils.exception;
+package vn.intrustca.esigncagateway.payload.exception;
 
 public class KeyValue {
     private String key;
